@@ -141,6 +141,9 @@ public class MainActivity extends AppCompatActivity {
             case R.id.Sensor:
                 openSensorMenu();
                 return true;
+            case R.id.Camera:
+                openCameraMenu();
+                return true;
 
             default:
                 return super.onOptionsItemSelected(item);
@@ -164,6 +167,10 @@ public class MainActivity extends AppCompatActivity {
 
     public void openSensorMenu() {
         Intent intent = new Intent(this, SensorActivity.class);
+        startActivity(intent);
+    }
+    public void openCameraMenu() {
+        Intent intent = new Intent(this, CameraActivity.class);
         startActivity(intent);
     }
 
